@@ -1,0 +1,42 @@
+body {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+h1, h2, h3 {
+    color: #30a14e;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li h3 {
+    margin: 0;
+}
+
+ul li h3::before {
+    content: "\2022";
+    color: #30a14e;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+a {
+    color: #45aaf2;
+}
+
+a:hover {
+    color: #d9534f;
+}
+
+p {
+    margin-bottom: 10px;
+}
