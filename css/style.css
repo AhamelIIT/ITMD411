@@ -29,14 +29,6 @@ ul li h3::before {
     margin-left: -1em;
 }
 
-a {
-    color: #45aaf2;
-}
-
-a:hover {
-    color: #d9534f;
-}
-
 p {
     margin-bottom: 10px;
 }
