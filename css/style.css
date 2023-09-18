@@ -2,6 +2,7 @@ body {
     background-color: #1e1e1e;
     color: #ffffff;
     font-family: Arial, sans-serif;
+    padding: 20px;
 }
 
 h1, h2, h3 {
@@ -22,7 +23,6 @@ ul li h3 {
 }
 
 ul li h3::before {
-    content: "\2022";
     color: #30a14e;
     display: inline-block;
     width: 1em;
@@ -31,4 +31,5 @@ ul li h3::before {
 
 p {
     margin-bottom: 10px;
+    word-wrap: break-word;
 }
