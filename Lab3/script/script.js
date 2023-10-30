@@ -18,8 +18,8 @@ function tipValues() {
         errorDiv.textContent = "";
         tipPercentageInput.value = tipPercentage + "%";
         const tipAmount = (billTotal * tipPercentage) / 100;
-        tipAmountInput.value = tipAmount.toFixed(2);
-        totalWithTipInput.value = (billTotal + tipAmount).toFixed(2);
+        tipAmountInput.value = "$" +  tipAmount.toFixed(2);
+        totalWithTipInput.value = "$" + (billTotal + tipAmount).toFixed(2); // Add the "$" here
     }
 }
 
