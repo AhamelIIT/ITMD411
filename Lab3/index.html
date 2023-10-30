@@ -9,5 +9,25 @@
 </head>
 <body>
     <script src="script/script.js"></script>
+
+    <form id="tipCalculator">
+        <label for="billTotal">Bill Total:</label>
+        <input type="text" id="billTotal" placeholder="Enter Bill Total" required>
+
+        <label for="tipPercentage">Tip Percentage:</label>
+        <input type="text" id="tipPercentage" disabled>
+
+        <label for="tipAmount">Tip Amount:</label>
+        <input type="text" id="tipAmount" disabled>
+
+        <label for="totalWithTip">Total Bill with Tip:</label>
+        <input type="text" id="totalWithTip" disabled>
+
+        <label for="tipRange">Tip Percentage Slider:</label>
+        <input type="range" id="tipRange" min="0" max="100" step="1">
+
+        <div id="error" class="error"></div>
+    </form>
+
 </body>
 </html>
