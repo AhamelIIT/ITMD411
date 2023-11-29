@@ -43,7 +43,7 @@ function fetchData() {
         .then(data => {
             document.querySelector('#sunrise').innerHTML = data.results.sunrise;
             document.querySelector('#sunset').innerHTML = data.results.sunset;
-            document.querySelector('#data-dump').innerHTML = JSON.stringify(data);
+            document.querySelector('#raw-data').innerHTML = JSON.stringify(data);
         })
         .catch(error => {
             console.error('Error fetching the API', error);
