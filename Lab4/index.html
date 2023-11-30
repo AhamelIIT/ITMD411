@@ -19,13 +19,36 @@
             <option value="hawaii">Hawaii, USA</option>
         </select>
         <button id="get-data">Get Data</button>
-
-        <p>Sunrise: <strong><span id="sunrise"></span></strong></p>
-        <p>Sunset: <strong><span id="sunset"></span></strong></p>
+        
+        <div id="today-info">
+            <h2>Today</h2>
+            <p>Sunrise: <span id="today-sunrise"></span></p>
+            <p>Sunset: <span id="today-sunset"></span></p>
+            <p>Dawn: <span id="today-dawn"></span></p>
+            <p>Dusk: <span id="today-dusk"></span></p>
+            <p>Day Length: <span id="today-day-length"></span></p>
+            <p>Solar Noon: <span id="today-solar-noon"></span></p>
+        </div>
+        
+        <div id="tomorrow-info">
+            <h2>Tomorrow</h2>
+            <p>Sunrise: <span id="tomorrow-sunrise"></span></p>
+            <p>Sunset: <span id="tomorrow-sunset"></span></p>
+            <p>Dawn: <span id="tomorrow-dawn"></span></p>
+            <p>Dusk: <span id="tomorrow-dusk"></span></p>
+            <p>Day Length: <span id="tomorrow-day-length"></span></p>
+            <p>Solar Noon: <span id="tomorrow-solar-noon"></span></p>
+        </div>
+        
+        <p>Time Zone: <span id="time-zone"></span></p>
     </div>
 
         <div id="data-dump">
-            <p id="raw-data"></p>
+            <h2>Today raw data JSON dump</h2>
+            <p id="raw-data-today"></p>
+
+            <h2>Tomorrow raw data JSON dump</h2>
+            <p id="raw-data-tomorrow"></p>
         </div>
     
         

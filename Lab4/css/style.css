@@ -9,7 +9,7 @@ body {
   }
 
   a:hover {
-  background-color: red;
+  background-color: white;
 	color: red;
 	transition: background-color 0.5s, color 0.5s;
   }
@@ -52,7 +52,12 @@ body {
   color: white;
   background-color: #59405C;
 }
-#raw-data {
+#raw-data-today {
+  flex-wrap: wrap;
+  border: 2px dashed black;
+  margin: 0 auto;
+}
+#raw-data-tomorrow {
   flex-wrap: wrap;
   border: 2px dashed black;
   margin: 0 auto;

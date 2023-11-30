@@ -36,16 +36,39 @@ document.getElementById('get-data').addEventListener('click', function() {
 
 
 function fetchData() {
-    const apiUrl = `https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude}`;
+    const apiUrlToday = `https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude}&date=today`;
+    const apiUrlTomorrow = `https://api.sunrisesunset.io/json?lat=${latitude}&lng=${longitude}&date=tomorrow`;
 
-    fetch(apiUrl)
+    
+    fetch(apiUrlToday)
         .then(response => response.json())
         .then(data => {
-            document.querySelector('#sunrise').innerHTML = data.results.sunrise;
-            document.querySelector('#sunset').innerHTML = data.results.sunset;
-            document.querySelector('#raw-data').innerHTML = JSON.stringify(data);
+            document.querySelector(`#today-sunrise`).innerHTML = data.results.sunrise;
+            document.querySelector(`#today-sunset`).innerHTML = data.results.sunset;
+            document.querySelector(`#today-dawn`).innerHTML = data.results.dawn;
+            document.querySelector(`#today-dusk`).innerHTML = data.results.dusk;
+            document.querySelector(`#today-day-length`).innerHTML = data.results.day_length;
+            document.querySelector(`#today-solar-noon`).innerHTML = data.results.solar_noon;
+            document.querySelector('#raw-data-today').innerHTML = JSON.stringify(data);
+        })
+        .catch(error => {
+            console.error('Error fetching the API', error);
+        });
+
+    fetch(apiUrlTomorrow)
+        .then(response => response.json())
+        .then(data => {
+            document.querySelector(`#tomorrow-sunrise`).innerHTML = data.results.sunrise;
+            document.querySelector(`#tomorrow-sunset`).innerHTML = data.results.sunset;
+            document.querySelector(`#tomorrow-dawn`).innerHTML = data.results.dawn;
+            document.querySelector(`#tomorrow-dusk`).innerHTML = data.results.dusk;
+            document.querySelector(`#tomorrow-day-length`).innerHTML = data.results.day_length;
+            document.querySelector(`#tomorrow-solar-noon`).innerHTML = data.results.solar_noon;
+            document.querySelector('#time-zone').innerHTML = data.results.timezone;
+            document.querySelector('#raw-data-tomorrow').innerHTML = JSON.stringify(data);
         })
         .catch(error => {
             console.error('Error fetching the API', error);
         });
 }
+
