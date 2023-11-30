@@ -1,6 +1,20 @@
 let latitude;
 let longitude;
 
+document.getElementById('use-my-location').addEventListener('click', function() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            latitude = position.coords.latitude;
+            longitude = position.coords.longitude;
+            fetchData();
+        }, function(error) {
+            console.error("Error Code = " + error.code + " - " + error.message);
+        });
+    } else {
+        alert("Geolocation is not supported by this browser.");
+    }
+});
+
 document.getElementById('get-data').addEventListener('click', function() {
     const city = document.getElementById('locations').value.toLowerCase();
 
